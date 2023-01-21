@@ -10,7 +10,7 @@ export default function App() {
       <Weather defaultCity="Kyiv"/>
       <footer>
       This project was coded by Yuliia Vasilyeva and is {" "}
-      <a href="https://github.com/yvasilyeva11031986/react-app-weather-project" target="_blank">
+      <a href="https://github.com/yvasilyeva11031986/react-app-weather-project" target="_blank" rel="noreferrer">
       open-sourced on GitHub   
       </a>
       </footer>
