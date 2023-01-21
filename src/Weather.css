@@ -28,11 +28,9 @@
     list-style: none;
 }
 
-.Weather img {
-    height: 64px;
+.Weather canvas {
     display: inline-block;
     margin-right: 10px;
-    margin-bottom: 25px;
 }
 
 .Weather .temp {
@@ -51,5 +49,4 @@
     font-size: 16px;
     position: relative;
     line-height: 1;
-    top: -32px;
 }
