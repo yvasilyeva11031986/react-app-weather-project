@@ -50,3 +50,7 @@
     position: relative;
     line-height: 1;
 }
+
+.Weather a {
+    text-decoration: none;
+}
