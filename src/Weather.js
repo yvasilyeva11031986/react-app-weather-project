@@ -7,22 +7,21 @@ import WeatherForecast from "./WeatherForecast";
 export default function Weather(props) {
     
     const [weatherData, setWeatherData] = useState({ ready: false });
-    const [city, setCity] = useState(props.defaultCity);
+    let [city, setCity] = useState(props.defaultCity);
     
     function handleResponse(response) {
-        console.log(response);
+        console.log(response.data);
         setWeatherData(
             {
-             ready: true,   
+             ready: true, 
              temp: Math.round(response.data.temperature.current),
              description: response.data.condition.description, 
              humidity: response.data.temperature.humidity,
              wind: Math.round(response.data.wind.speed),
-             city: response.data.city,   
+             city: response.data.city,
              icon: response.data.condition.icon,  
              date: new Date(response.data.time * 1000),    
             });    
-
     }
 
     function search () {
@@ -38,6 +37,7 @@ export default function Weather(props) {
 
     function handleCityChange(event) {
         setCity(event.target.value);
+        
     }
 
     if(weatherData.ready) {
@@ -59,7 +59,7 @@ export default function Weather(props) {
                 </div>
                 </div>
                 </form>
-                <WeatherInfo info={weatherData}/>
+                <WeatherInfo data={weatherData}/>
                 <WeatherForecast city={weatherData.city}/>
             </div>    
         );
